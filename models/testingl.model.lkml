@@ -129,6 +129,7 @@ explore: korean_string {}
 explore: map_layer {}
 
 explore: orders {
+  description: "please use @google.com email id"
   join: users {
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
