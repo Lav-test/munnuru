@@ -54,19 +54,36 @@ view: users {
     drill_fields: [detail*]
   }
 
+  #----------------------------------------------
+  ### PLEASE DO NOT DELETE THESE MEASURES
+  measure:yesno_measure  {
+    type: yesno
+    sql: ${count}>10 ;;
+  }
+  measure: max_date {
+    type: date
+    sql: MAX(${created_date}) ;;
+  }
+  measure: my_list {
+    type: list
+    list_field: age
+  }
+   ### PLEASE DO NOT DELETE THESE MEASURES
+  #----------------------------------------------
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	id,
-	first_name,
-	last_name,
-	demo_visits_data.count,
-	events.count,
-	orders.count,
-	saralooker.count,
-	sindhu.count,
-	user_data.count
-	]
+  id,
+  first_name,
+  last_name,
+  demo_visits_data.count,
+  events.count,
+  orders.count,
+  saralooker.count,
+  sindhu.count,
+  user_data.count
+  ]
   }
 
 }
