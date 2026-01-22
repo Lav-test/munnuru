@@ -27,7 +27,7 @@ view: products {
     END ;;
 
     link: {
-      label: "Explore Brand Link"
+      label: "test"
       url: "
       {% if value == 'Allegra K' %} https://www.amazon.com/allegra-k
       {% elsif value == 'Nautica' %} https://www.nautica.com
@@ -43,7 +43,6 @@ view: products {
       {% elsif value == 'Orvis' %} https://www.orvis.com
       {% else %} https://www.google.com/search?q={{ value | encode_uri }}
       {% endif %}"
-      icon_url: "https://www.google.com/favicon.ico"
     }
   }
 
