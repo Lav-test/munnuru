@@ -42,8 +42,7 @@ view: products {
       {% else %}
         <a href="https://www.google.com/search?q={{ value | encode_uri }}">https://www.google.com/search?q={{ value | encode_uri }}</a>
     {% endcase %} ;;
-  }
-
+}
   dimension: category {
     type: string
     sql: ${TABLE}.category ;;
