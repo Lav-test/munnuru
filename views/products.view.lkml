@@ -9,7 +9,7 @@ view: products {
   }
   dimension: brand_url {
     type: string
-    label: "External Link URL"
+    label: "brand"
     # Pointing to the 'brand' column as seen in your screenshot
     sql: ${TABLE}.brand ;;
 
