@@ -27,7 +27,7 @@ view: products {
     END ;;
 
     link: {
-      label: "test"
+      label: "Explore name is here "
       url: "
       {% if value == 'Allegra K' %} https://www.amazon.com/allegra-k
       {% elsif value == 'Nautica' %} https://www.nautica.com
