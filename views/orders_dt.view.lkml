@@ -11,8 +11,8 @@ view: orders_dt {
     demo_db.orders
    -- {% parameter table %}
   --  {% if orders_dt.status_filter._is_filtered %}
-   -- WHERE
-  {% condition status_filter %} order.status {% endcondition %}
+    WHERE
+  {% condition status_filter %} status {% endcondition %}
    -- status = {{_filters['orders_dt.status_filter'] | sql_quote }}
   --  {% endif %}
     ;;
