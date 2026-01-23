@@ -8,19 +8,21 @@ view: orders_dt {
     status,
     created_at
     FROM
-    {% parameter table %}
-    {% if orders_dt.status_filter._is_filtered %}
-    WHERE
-    status = {{_filters['orders_dt.status_filter'] | sql_quote }}
-    {% endif %}
+    demo_db.orders
+   -- {% parameter table %}
+  --  {% if orders_dt.status_filter._is_filtered %}
+   -- WHERE
+  {% condition status_filter %} order.status {% endcondition %}
+   -- status = {{_filters['orders_dt.status_filter'] | sql_quote }}
+  --  {% endif %}
     ;;
   }
 
 
-  parameter: table {
-    type:  unquoted
-    default_value: "demo_db.orders"
-  }
+ # parameter: table {
+ #   type:  unquoted
+  #  default_value: "demo_db.orders"
+#  }
 
   filter: status_filter{
     type: string
