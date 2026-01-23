@@ -24,6 +24,8 @@ explore: billion_orders {
   }
 }
 
+explore: orders_dt {}
+
 explore: bud {}
 
 explore: budget {}
