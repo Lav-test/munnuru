@@ -10,10 +10,12 @@ view: orders_dt {
     FROM
     {% parameter table %}
     {% if orders_dt.status_filter._is_filtered %}
-    WHERE status = {{_filters['orders_dt.status_filter'] | sql_quote }}
+    WHERE
+    status = {{_filters['orders_dt.status_filter'] | sql_quote }}
     {% endif %}
     ;;
   }
+
 
   parameter: table {
     type:  unquoted
