@@ -1,5 +1,5 @@
 connection: "thelook"
-# test
+
 # include all the views
 include: "/views/**/*.view.lkml"
 
@@ -23,6 +23,8 @@ explore: billion_orders {
     relationship: many_to_one
   }
 }
+
+explore: users_deploy {}
 
 explore: orders_dt {}
 
