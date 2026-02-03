@@ -13,7 +13,7 @@ view: orders {
     sql: ${TABLE}.created_at ;;
   }
   dimension: status {
-    label: "sttaus check level"
+    label: "sttaus check level data"
     type: string
     sql: ${TABLE}.status ;;
   }
