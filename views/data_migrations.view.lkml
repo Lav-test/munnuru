@@ -1,12 +1,10 @@
-view: schema_migrations {
-
-  sql_table_name: gcpl236.schema_migrations ;;
+view: data_migrations {
+  sql_table_name: gcpl236.data_migrations ;;
 
   dimension: filename {
     type: string
     sql: ${TABLE}.filename ;;
   }
-
 
   measure: count {
     type: count
