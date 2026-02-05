@@ -19,7 +19,7 @@ view: orders {
   }
 
   dimension: status_ai {
-    label: "sttaus check level data"
+    # label: "sttaus check level data"
     type: string
     sql: ${TABLE}.status ;;
   }
