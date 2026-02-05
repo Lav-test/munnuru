@@ -38,6 +38,11 @@ view: users {
     type: string
     sql: ${TABLE}.gender ;;
   }
+
+  dimension: full_name {
+    type: string
+    sql: concat(${users.state},"_",${users.last_name}) ;;
+  }
   dimension: last_name {
     type: string
     sql: ${TABLE}.last_name ;;
