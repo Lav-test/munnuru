@@ -1,12 +1,18 @@
 view: order_items {
   sql_table_name: demo_db.order_items ;;
-  drill_fields: [id]
+  # drill_fields: [id]
 
   dimension: id {
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
   }
+
+  # dimension: id_1 {
+  #   primary_key: yes
+  #   type: number
+  #   sql: ${TABLE}.id ;;
+  # }
   dimension: inventory_item_id {
     type: number
     # hidden: yes
@@ -17,11 +23,11 @@ view: order_items {
     # hidden: yes
     sql: ${TABLE}.order_id ;;
   }
-  dimension: phone {
+  dimension: phone_1 {
     type: string
     sql: ${TABLE}.phone ;;
   }
-  dimension: phones {
+  dimension: phones_1 {
     type: string
     sql: ${TABLE}.phones ;;
   }
@@ -36,6 +42,6 @@ view: order_items {
   }
   measure: count {
     type: count
-    drill_fields: [id, orders.id, inventory_items.id]
+    # drill_fields: [id, orders.id, inventory_items.id]
   }
 }
