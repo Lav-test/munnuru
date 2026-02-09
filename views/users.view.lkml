@@ -52,6 +52,16 @@ view: users {
   measure: count {
     type: count
     drill_fields: [detail*]
+    html: {% if value > 1000 and users.state._value != blank %}
+    <p style="color: black; background-color: lightblue; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% elsif value > 500 and users.state._value != blank %}
+    <p style="color: black; background-color: lightgreen; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% elsif value <= 500 and users.state._value != blank %}
+    <p style="color: black; background-color: pink; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% else %}
+    {{ rendered_value }}
+    {% endif %}
+    ;;
   }
 
   #----------------------------------------------
