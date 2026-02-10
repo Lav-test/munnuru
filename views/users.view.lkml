@@ -12,6 +12,7 @@ view: users {
     sql: ${TABLE}.age ;;
   }
   dimension: city {
+    label: "city name"
     type: string
     sql: ${TABLE}.city ;;
   }
@@ -37,6 +38,11 @@ view: users {
     type: string
     sql: ${TABLE}.gender ;;
   }
+
+  dimension: full_name {
+    type: string
+    sql: concat(${users.state},"_",${users.last_name}) ;;
+  }
   dimension: last_name {
     type: string
     sql: ${TABLE}.last_name ;;
@@ -52,6 +58,16 @@ view: users {
   measure: count {
     type: count
     drill_fields: [detail*]
+    html: {% if value > 1000 and users.state._value != blank %}
+    <p style="color: black; background-color: lightblue; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% elsif value > 500 and users.state._value != blank %}
+    <p style="color: black; background-color: lightgreen; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% elsif value <= 500 and users.state._value != blank %}
+    <p style="color: black; background-color: pink; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% else %}
+    {{ rendered_value }}
+    {% endif %}
+    ;;
   }
 
   #----------------------------------------------

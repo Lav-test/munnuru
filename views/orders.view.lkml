@@ -13,6 +13,13 @@ view: orders {
     sql: ${TABLE}.created_at ;;
   }
   dimension: status {
+    label: "sttaus check level data"
+    type: string
+    sql: ${TABLE}.status ;;
+  }
+
+  dimension: status_ai {
+    # label: "sttaus check level data"
     type: string
     sql: ${TABLE}.status ;;
   }
