@@ -17,6 +17,12 @@ view: orders {
     type: string
     sql: ${TABLE}.status ;;
   }
+
+  dimension: status_ai {
+    # label: "sttaus check level data"
+    type: string
+    sql: ${TABLE}.status ;;
+  }
   dimension: user_id {
     type: number
     # hidden: yes
