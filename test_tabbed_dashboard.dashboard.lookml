@@ -4,7 +4,7 @@
   description: ''
   preferred_slug: 3sTf8rWCBnT4ZS3Su0S44g
   theme_name: ''
-  layout: newspaper
+  layout: tile
   tabs:
   - name: Test Tabbed Dashboards
     label: Test Tabbed Dashboards
